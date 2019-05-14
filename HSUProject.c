@@ -5,7 +5,8 @@
 #define THANG_DEFAULT 5
 #define NAM_DEFAULT 2019
 
-
+#define  
+#define
 //3 truong hop tinh do chenh lech thang
 //Truong hop 1: ThangNguoiDungNhap == THANG_DEFAULT && Cung Nam
 //Truong hop 2: ThangNGuoiDUngNhap != THANG_DEFAULT && Khac Nam
@@ -13,7 +14,7 @@
 
 //truyen thang va nam, check 
 
-int tinhDoChenhLechCuaThang(int thangNguoiDungNhap, int namNguoiDungNhap)
+int tinhNgayChenhLechGiuaThang(int thangNguoiDungNhap, int namNguoiDungNhap)
 {
     //check
     
@@ -21,12 +22,9 @@ int tinhDoChenhLechCuaThang(int thangNguoiDungNhap, int namNguoiDungNhap)
     {
         
     }
-    else
+    else if (namNguoiDungNhap < NAM_DEFAULT)
     {
-        if()
-        {
-
-        }
+        
     }
 }
 
