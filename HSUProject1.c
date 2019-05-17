@@ -5,6 +5,13 @@
 #define YEAR_DEFAULT 1
 #define DAY_OF_NORMAL_YEAR 365
 
+/*
+   -------------TO DO--------------
+   Function can add them vao project
+   - check input (number, letter)
+   - refactor functions
+   - 
+ */
 
 enum days //asign number for the seven days of week for easier tracking
 {
