@@ -5,6 +5,14 @@
 #define YEAR_DEFAULT 1
 #define DAY_OF_NORMAL_YEAR 365
 
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN    "\x1b[36m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+
 /*
    -------------TO DO--------------
    Function can add them vao project
@@ -32,7 +40,21 @@ typedef enum //self-made boolean type
 
 bool checkLeapYear(int year) //check whether the year is leap or not
 {
-    if (((year % 4 == 0) && (year % 100 != 10)) || year % 400 == 0)
+    // If a year is multiple of 400,
+    // then it is a leap year
+    if (year % 400 == 0)
+    {
+        return true;
+    }
+    // Else If a year is muliplt of 100,
+    // then it is not a leap year
+    if (year % 100 == 0)
+    {
+        return false;
+    }
+    // Else If a year is muliplt of 4,
+    // then it is a leap year
+    if (year % 4 == 0)
     {
         return true;
     }
@@ -121,8 +143,8 @@ int calculateTheTotalDateDiff(int day, int month, int year)
             countLeapYear++; //count how many leap years are there in the gap between 1/1/1 and the date your entered
         }
     }
-    totalDateDiff = (((year - 1) * DAY_OF_NORMAL_YEAR) + countLeapYear) + calculateTotalDayInYear(day ,month ,year) - 15 ;
-    return totalDateDiff; //why you subtract 15 ???? 
+    totalDateDiff = (((year - 1) * DAY_OF_NORMAL_YEAR) + countLeapYear) + calculateTotalDayInYear(day ,month ,year) ;
+    return totalDateDiff; //
 }
 
 
@@ -178,29 +200,46 @@ void printfDayTable()
 {
     printf("\n*---------------*\n");
     printf("|Day       | Ref|\n");
-    printf("|Sunday    |  0 |\n");
-    printf("|Monday    |  1 |\n");
-    printf("|Tuesday   |  2 |\n");
-    printf("|Wednesday |  3 |\n");
-    printf("|Thursday  |  4 |\n");
-    printf("|Friday    |  5 |\n");
+    printf(ANSI_COLOR_RED "|Sunday    |  0 |\n" ANSI_COLOR_RESET);
+    printf(ANSI_COLOR_YELLOW "|Monday    |  1 |\n"ANSI_COLOR_RESET);
+    printf(ANSI_COLOR_BLUE"|Tuesday   |  2 |\n"ANSI_COLOR_RESET);
+    printf(ANSI_COLOR_GREEN"|Wednesday |  3 |\n"ANSI_COLOR_RESET);
+    printf(ANSI_COLOR_MAGENTA"|Thursday  |  4 |\n"ANSI_COLOR_RESET);
+    printf(ANSI_COLOR_CYAN"|Friday    |  5 |\n"ANSI_COLOR_RESET);
     printf("|Saturday  |  6 |\n");
     printf("*---------------*\n");
 }
 
+void cleanBuffer()
+{
+    int n;
+    while((n = getchar()) != EOF && n != '\n' );
+}
+
 int main()
 {
+    //can't catch the 31/4 and 29/2 in 2019.
     int day, month, year;
+    do {
     printf("Please enter your day: ");
     scanf("%d",&day);
+    cleanBuffer();
+    }while(day < 0 || day > 31 );
+    //add check for day
+    do{
     printf("Please enter you month: ");
     scanf("%d",&month);
+    cleanBuffer();
+    }while(month < 0 || month > 12);
+
+    do{
     printf("Please enter you year: ");
     scanf("%d",&year);
-    
+    }
+    while(year < 0 || year > 5000);
+
     printfDayTable();
 
     int sevenDay = findTheSevenDayOfWeek(day , month , year);
-
     printf("the day: %d\n",sevenDay);
 }
