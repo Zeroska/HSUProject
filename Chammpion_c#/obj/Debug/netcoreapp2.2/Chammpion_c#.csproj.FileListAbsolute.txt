@@ -1,0 +1,11 @@
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/obj/Debug/netcoreapp2.2/Chammpion_c#.csprojAssemblyReference.cache
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/obj/Debug/netcoreapp2.2/Chammpion_c#.csproj.CoreCompileInputs.cache
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/obj/Debug/netcoreapp2.2/Chammpion_c#.AssemblyInfoInputs.cache
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/obj/Debug/netcoreapp2.2/Chammpion_c#.AssemblyInfo.cs
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/bin/Debug/netcoreapp2.2/Chammpion_c#.deps.json
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/bin/Debug/netcoreapp2.2/Chammpion_c#.runtimeconfig.json
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/bin/Debug/netcoreapp2.2/Chammpion_c#.runtimeconfig.dev.json
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/bin/Debug/netcoreapp2.2/Chammpion_c#.dll
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/bin/Debug/netcoreapp2.2/Chammpion_c#.pdb
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/obj/Debug/netcoreapp2.2/Chammpion_c#.dll
+/home/zeroska/Documents/K17HuanWorkSpace/Chammpion_c#/obj/Debug/netcoreapp2.2/Chammpion_c#.pdb

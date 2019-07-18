@@ -1,0 +1,11 @@
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/obj/Debug/netcoreapp2.2/Animal.csprojAssemblyReference.cache
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/obj/Debug/netcoreapp2.2/Animal.csproj.CoreCompileInputs.cache
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/obj/Debug/netcoreapp2.2/Animal.AssemblyInfoInputs.cache
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/obj/Debug/netcoreapp2.2/Animal.AssemblyInfo.cs
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/bin/Debug/netcoreapp2.2/Animal.deps.json
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/bin/Debug/netcoreapp2.2/Animal.runtimeconfig.json
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/bin/Debug/netcoreapp2.2/Animal.runtimeconfig.dev.json
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/bin/Debug/netcoreapp2.2/Animal.dll
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/bin/Debug/netcoreapp2.2/Animal.pdb
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/obj/Debug/netcoreapp2.2/Animal.dll
+/home/zeroska/Documents/K17HuanWorkSpace/Animal/obj/Debug/netcoreapp2.2/Animal.pdb

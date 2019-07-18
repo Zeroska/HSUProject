@@ -189,6 +189,14 @@ void draw_window(int x1,int y1, int x2, int y2)
 		putchar(left);
 	}
 }
+
+
+void eraseLineBaseOnXYCord(int xCord, int yCord) //it is supposed to erase a line
+{
+    printf("%c[%d;%dk",0x1B, yCord,xCord); //the line
+    fflush(stdin);
+}
+
 void clear_window(int x1, int y1, int x2, int y2)
 {
 	int i=0,j;
@@ -269,6 +277,7 @@ int main(int argc, char** argv) {
 				generate_problem(choice1,choice2,a,b,kq);
 				numproblem ++;
 				draw_window(x,y+8,75,y+15);
+                
 				clear_window(x,y+8,75,y+15);
 				//show problem
 				ops = choice1;

@@ -4,8 +4,10 @@
 #define MONTH_DEFAULT 1
 #define YEAR_DEFAULT 1
 #define DAY_OF_NORMAL_YEAR 365
+#define MONTH_31 31
+#define MONTH_30 30
 
-#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_RED     "\x1b[31m" //color for the table 
 #define ANSI_COLOR_GREEN   "\x1b[32m"
 #define ANSI_COLOR_YELLOW  "\x1b[33m"
 #define ANSI_COLOR_BLUE    "\x1b[34m"
@@ -70,16 +72,16 @@ int calculateTotalDayInYear(int day, int month, int year) //version 1
     {
         daysInFeb = 29;
     }
-    switch(month)
+    switch(month) //if month == one in this case that mean the previous month is alreay fill with days
     {
         case 2:
          {
-            totalDayDiff += 31;
+            totalDayDiff += MONTH_31;
             break;
          }
         case 3:
          {
-            totalDayDiff += 31 + daysInFeb;
+            totalDayDiff += MONTH_31 + daysInFeb; //because 
             break;
          }
         case 4:
@@ -196,6 +198,21 @@ int findTheSevenDayOfWeek(int day, int month, int year)
         }
     }
 }
+
+int countTheSunDay(int day, int month, int year) //Count the total of Sunday from 1/1/1 to your entered date. 
+{
+    int totalSunday = 0;
+    //each week = 1 sunday so the total of week = total of sundays.
+    int totalDays = calculateTheTotalDateDiff(day, month, year); //total days differnti
+    int days = findTheSevenDayOfWeek(day , month, year);
+    totalSunday += totalDays; 
+    if(days == 0)
+    {
+        totalSunday += 1;
+    }
+    return totalSunday;//return the total of Sunday 
+}
+
 void printfDayTable()
 {
     printf("\n*---------------*\n");
@@ -225,7 +242,7 @@ int main()
     scanf("%d",&day);
     cleanBuffer();
     }while(day < 0 || day > 31 );
-    //add check for day
+    
     do{
     printf("Please enter you month: ");
     scanf("%d",&month);

@@ -1,0 +1,183 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <p id = "triangle"></p>
+        <script>//triagle
+        for (let i = 0; i < 6;i++)
+        {
+            for (let j = 0; j < i + 1 ;j++)
+            {
+                console.log("#");
+            }
+            console.log("\n");
+        }
+        </script>
+        <script>//Chessboard
+        for (let i = 0; i < 8;i++)
+        {
+            for (let j = 0; j < 8  ;j++)
+            {
+                if(i % 2 == 0)
+                {
+                    console.log("# ")
+                }
+                else
+                {
+                    console.log(" #")
+                }
+            }
+            console.log("\n");
+        }
+        </script>
+        <script> //FizzBuzz
+            for(let i = 0; i < 100;i++)
+            {
+                if(i % 3 == 0)
+                {
+                    console.log("Fizz");
+                }
+                if(i % 5 == 0)
+                {
+                    console.log("Buzz");
+                }
+                if(i % 5 == 0 && i % 3 == 0)
+                {
+                    console.log("FIzzBuzz");
+                }
+            }
+        </script>
+        <script>
+            const min = function(input1,input2)
+            {
+                let min  = input1;
+                if(input2 < min)
+                {
+                    return input2;
+                }
+                return min;
+            }
+            console.log(min(1000,15))
+        </script>
+        <script>
+            const isEven = function(input)
+            {
+                if(input % 2 == 0 || input == 0)
+                {
+                    return true;
+                }
+                else(input % 2 == 1 || input == 1)
+                {
+                    return false
+                }
+            }
+            console.log(isEven(75));
+            console.log(isEven(60));
+            console.log(isEven(1));
+            console.log(isEven(2));
+            console.log(isEven(-1));
+        </script>
+        <!--CountBs -->
+        <script>
+            const countBs = function(aString)//count how many uppercase B
+            {
+                let aStringLen = aString.length;
+                let countB = 0;
+                for(let i = 0; i < aStringLen; i++)
+                {
+                    if(aString[i] == "B")
+                    {
+                        countB++;
+                    }
+                }
+                return countB;
+            }
+            console.log(countBs("BBCasfbasdasdasdbdushakfhskhf"));
+        </script>
+
+        <!--CountChar -->
+        <script>
+            const countChar = function(aString, targetChar)
+            {
+                let aStringlen = aString.length;
+                let countChar = 0;
+                for(let i = 0; i < aStringlen;i++)
+                {
+                    if(aString[i] == targetChar)
+                    {
+                        countChar++;
+                    }
+                }
+                return countChar;
+            }
+            console.log(countChar("AlooooooALoooooooChip","o"));
+        </script>
+        
+        <!--CHAPTER 4 range va sum-->
+        <script>
+            const range = function(start, end)
+            {
+                resultArray = [];
+                for (let i = start; i <= end; i++)
+                {
+                    resultArray.push(i)
+                }
+                return resultArray;
+            }
+            const sum = function(input)
+            {
+                let sumResult = 0;
+                let inputLen = input.length;
+                for(let j = 0;j < inputLen;j++)
+                {
+                    sumResult += input[j];
+                }
+                return sumResult;
+            }
+            console.log(range(1,10))
+            console.log(sum(range(1,5)));
+        </script>
+
+        <!--Dao nguoc Array(ReverseArray)-->
+        <script>
+            let testArray =[1,2,3,4,5,6,7,8,9,10]
+            const reverseArray = function(anArray)
+            {
+                let resultArray = [];
+                let anArrayLen = anArray.length;
+                for(let i = anArrayLen - 1; i >= 0; i--)
+                {
+                    resultArray.push(anArray[i]);
+                }
+                return resultArray;
+            }
+
+            const swap = function(number1, number2)
+            {
+                let temp = number1;
+                number1 = number2;
+                number2 = temp;
+            }
+
+            const reverseArrayInPlace = function(anArray2)
+            {
+                let anArrayLen2 = Math.floor(anArray2.length/2);
+                for(let j = 0; j < anArrayLen2;j++)
+                {
+                    let temp  = anArray2[j];
+                    anArray2[j] = anArray2[anArray2.length - 1 - j];
+                    anArray2[anArray2.length -1 -j] = temp;
+                }
+                return anArray2;
+            }
+
+            console.log("Test array: " + testArray);
+            console.log(reverseArray([1,2,3,4,5]));
+            console.log(reverseArrayInPlace(testArray));
+        </script>
+
+        <!--A list-->
+        <script>
+        </script>
+    </body>
+</html>

@@ -1,23 +1,38 @@
+question = [2, 1, 4, 5, 7, 3, 7 ,8 ,9, 6]
+length = []
+trace = []
 
+# check point at start and end
+question.insert(0, -1)
+question.append(99999)
 
-#Enter Date and convert it to day of week.
+# init data
+for i in range(0, len(question)):
+    print(i)
+    length.append(0)
+    trace.append(-1)
 
-def checkLeapYear(year):
-    if(year % 400 == 0):
-        return True #Leap year
+# the last number always have length is 1
+length[len(length)-1] = 1
 
-    if(year % 100 == 0):
-        return False #Not leap Year
+# start run from n - 1 to 0, n is 99999
+for i in range(len(question) - 2, -1, -1):
+    if question[i] <= question[i+1]:
+        length[i] = length[i+1] + 1
+        trace[i] = i + 1
+    else:
+        for j in range(i + 1, len(question)):
+            if question[i] <= question[j]:
+                length[i] = length[j] + 1
+                trace[i] = j
+                break
+print(question)
+print(length)
+print(trace)
 
-    if(year % 4 == 0):
-        return True #Leap year
-    return False
-
-
-def convert_Date_Into_Day(day, month, year):
-
-
-
-if __name__ == "__main__":
-    day = int(input())
-    month = int
+start = trace[0]
+string_need = ""
+while trace[start] != -1:
+    string_need = string_need + str(question[start]) + " "
+    start = trace[start]
+print(string_need)

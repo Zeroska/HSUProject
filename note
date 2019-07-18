@@ -1,0 +1,55 @@
+#define EXAMPLE(X, Y) (((X) + (Y)) /2)
+        ----Macro----  
+
+- can use "#define" like this 
+- X, Y are int, float, double
+- it has side effects when using macro
+
+
+
+                        1/ POINTER.
+- pointer 64bit OS is 8byte lenght
+- void pointer
+
+some void pointer in getimage and putimage
+
+    - Array pointer
+
+<type> *<pointer name> [<number of element>];
+
+    - function pointer
+
+<type> (*<name>)(type1, type2,..., typen);
+
+Note: for the int main(int argc, char *argv[])
+
+- google
+
+Learn how to write test case
+
+**How to install Window Feature
+
+- Turn On and enable Window subsystem for Linux (force to restart your computer
+- go to Microsolf Store and install Ubuntu 18.04 LTS subsystem
+
+
+
+
+
+                       -----HANDLE------
+-- Like a form  
+Interface talk about the abilities of objects
+
+
+                         -----C#------
+
+Need Visual Studio  
+
+- What is delegate
+- What is event 
+- What is lamda Expression
+
+
+                        -----Dynamic Programming---
+
+
